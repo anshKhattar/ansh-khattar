@@ -1,24 +1,25 @@
 import './App.css';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Home from './pages/HomePage/Home';
+import Experience from './pages/Experience/Experience';
+import Work from './pages/Work/Work';
+import Projects from './pages/Projects/Projects';
+import Skills from './pages/Skills/Skills';
+import Education from './pages/Education/Education';
 
 function App() {
   return (
     <div className="App">
-      <div className="welcome">
-      <h1>Hi there </h1>
-      <p>Welcome to my website</p>
-      </div>
-      <div className="navbar">
-        <ul className="navbar-list">
-          <li><a href="">About</a></li>
-          <li><a href="">Experience</a></li>
-          <li><a href="">Work Samples</a></li>
-          <li><a href="">Projects</a></li>
-          <li><a href="">Skills</a></li>
-          <li><a href="">Education</a></li>
-        </ul>
-      </div>
-      <div className="main-area"></div>
-      <div className="social-links"></div>
+      <Router>
+      <Routes>
+          <Route path="/" element={<Home/>} />
+          <Route path="/experience" element={<Experience/>} />
+          <Route path="/work" element={<Work/>} />
+          <Route path="/projects" element={<Projects/>} />
+          <Route path="/skills" element={<Skills/>} />
+          <Route path="/education" element={<Education/>} />
+        </Routes>
+      </Router>
     </div>
   );
 }
