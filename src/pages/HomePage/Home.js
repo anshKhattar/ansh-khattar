@@ -5,8 +5,9 @@ export default function Home() {
   return (
     <>
     <Header />
-
-    <div></div>
+    <div>
+      My name is Ansh, and I am a backend developer. Currently working with SpringBoot at Tekion Corp.
+    </div>
     </>
   )
 }
